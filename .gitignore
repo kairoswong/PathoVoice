@@ -1,0 +1,47 @@
+# ---- Build output ----
+build/
+cmake-build-*/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.ipynb_checkpoints/
+scripts/requirements.txt
+
+# ---- Model weights and datasets (large / privacy-sensitive) ----
+models/*
+!models/.gitkeep
+data/*
+!data/.gitkeep
+*.bin
+*.gguf
+*.safetensors
+*.ckpt
+*.pt
+*.onnx
+*.wav
+*.mp3
+*.flac
+
+# ---- Editor / OS ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# ---- Logs and local config ----
+*.log
+.env

@@ -1,0 +1,5 @@
+# PathoVoice
+
+## License
+
+[MIT](LICENSE)
