@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pathovoice"
+dynamic = ["version"]
+description = "PathoVoice"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.setuptools.dynamic]
+version = { attr = "asr.__version__" }
+
+[tool.setuptools]
+package-dir = { "" = "models" }
+
+[tool.setuptools.packages.find]
+where = ["models"]
+include = ["asr*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

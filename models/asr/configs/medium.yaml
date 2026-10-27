@@ -1,0 +1,39 @@
+name: main
+device: cuda
+model: medium
+
+train_audio_dir: "datasets/train_set/wav"
+train_label_file: "datasets/train_set/transcript"
+# train_translate_file: "datasets/train_set/translate"
+val_audio_dir: "datasets/val_set/wav"
+val_label_file: "datasets/val_set/transcript"
+# val_translate_file: "datasets/val_set/translate"
+
+num_workers: 2
+pin_memory: true
+
+language: zh
+translate_language: en
+
+checkpoint_dir: "checkpoints"
+save_checkpoints: false
+
+train_encoder: true
+train_decoder: false
+train_augment: true
+
+theta: 0.5
+seed: 3407
+learning_rate: 1.0e-6
+training_batch_size: 2
+accumulation_steps: 4
+beta_1: 0.9
+beta_2: 0.99
+weight_decay: 1.0e-2
+epsilon: 1.0e-8
+max_grad_norm: 1.0
+epochs: 10
+warmup_ratio: 0.2
+val_epochs: 1
+validation_batch_size: 10
+mel_channels: 80

@@ -23,6 +23,9 @@ scripts/requirements.txt
 # ---- Model weights and datasets (large / privacy-sensitive) ----
 models/*
 !models/.gitkeep
+!models/*/
+!models/*/**
+models/**/__pycache__/
 data/*
 !data/.gitkeep
 *.bin
@@ -35,6 +38,10 @@ data/*
 *.mp3
 *.flac
 
+# ---- Model files ----
+models/asr/datasets/*
+models/asr/checkpoints/*
+
 # ---- Editor / OS ----
 .vscode/
 .idea/
@@ -45,3 +52,4 @@ Thumbs.db
 # ---- Logs and local config ----
 *.log
 .env
+wandb/
