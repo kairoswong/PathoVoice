@@ -217,7 +217,13 @@ def main(argv: Optional[list] = None):
     frame, results = evaluator.run(test_loader)
 
     pd.set_option("display.max_rows", None)
-    print(frame.to_string(), flush=True)
+    display_frame = frame[["references", "normalized_predictions"]].rename(
+        columns={
+            "references": "label",
+            "normalized_predictions": "normalized_text",
+        }
+    )
+    print(display_frame.to_string(max_colwidth=80), flush=True)
 
     if args.output_csv:
         frame.to_csv(args.output_csv, index=False)

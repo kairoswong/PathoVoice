@@ -1,9 +1,10 @@
 # PathoVoice
 
-## Tests
+## Install
 
 ```bash
-python -m pytest tests
+git clone --recurse-submodules git@github.com:kairoswong/PathoVoice.git
+cd PathoVoice
 ```
 
 ## License
